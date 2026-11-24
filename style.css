@@ -1,0 +1,239 @@
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f3ec;
+    color: #352c32;
+    font-family: Georgia, serif;
+    line-height: 1.7;
+}
+
+
+/* Opening section */
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #f8e5e7,
+        #e8dff3,
+        #f8f3ec
+    );
+}
+
+.small-text,
+.chapter {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #947080;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 100px);
+    line-height: 1.1;
+    margin: 25px 0;
+}
+
+.hero-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    text-decoration: none;
+    color: white;
+    background-color: #74566b;
+
+    padding: 12px 25px;
+    border-radius: 30px;
+
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+.start-button:hover {
+    background-color: #4d3548;
+    transform: translateY(-3px);
+}
+
+
+/* Introduction */
+.intro {
+    max-width: 700px;
+    margin: auto;
+    padding: 100px 25px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+
+/* Memory sections */
+.memory {
+    max-width: 1100px;
+    margin: 80px auto;
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.memory > img {
+    width: 50%;
+    max-height: 500px;
+
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.memory-text {
+    flex: 1;
+}
+
+.memory-text h2 {
+    font-size: clamp(28px, 4vw, 45px);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+/* Reverses photo and text positions */
+.memory.reverse {
+    flex-direction: row-reverse;
+}
+
+
+/* Two childhood pictures */
+.photo-pair {
+    width: 50%;
+
+    display: flex;
+    gap: 15px;
+}
+
+.photo-pair img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* Ending */
+.ending {
+    background-color: #e9dce7;
+
+    text-align: center;
+    padding: 120px 25px;
+}
+
+.ending h2 {
+    font-size: clamp(45px, 7vw, 80px);
+    margin: 20px 0;
+}
+
+.ending p {
+    max-width: 550px;
+    margin: 15px auto;
+}
+
+.final-line {
+    font-style: italic;
+    font-size: 20px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 13px;
+    color: #947080;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .memory,
+    .memory.reverse {
+        flex-direction: column;
+        gap: 25px;
+
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+
+    .memory > img {
+        width: 100%;
+        max-height: 400px;
+    }
+
+    .memory-text {
+        width: 100%;
+    }
+
+    .photo-pair {
+        width: 100%;
+    }
+
+    .photo-pair img {
+        width: 50%;
+    }
+
+    .intro {
+        padding: 70px 20px;
+    }
+
+    .ending {
+        padding: 90px 20px;
+    }
+}
+.video-section {
+    text-align: center;
+    padding: 100px 25px;
+    background-color: #f8e5e7;
+}
+
+.video-section h2 {
+    font-size: clamp(30px, 5vw, 55px);
+    margin: 20px 0;
+}
+
+.video-section p {
+    margin-bottom: 25px;
+}
+
+.video-section video {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    border-radius: 12px;
+}
